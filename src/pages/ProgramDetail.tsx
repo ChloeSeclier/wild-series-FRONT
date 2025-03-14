@@ -124,7 +124,7 @@ export default function ProgramDetail() {
         </div> */}
       <div className="selection-choix">
         <Link to={`/programs/${id}/edit`}>Modifier ✏️</Link>
-        <ProgramDeleteForm id={id}>Supprimer ❌</ProgramDeleteForm>
+        <ProgramDeleteForm id={id === "1" ? 1 : 2}>Supprimer ❌</ProgramDeleteForm>
       </div>
     </>
     // )

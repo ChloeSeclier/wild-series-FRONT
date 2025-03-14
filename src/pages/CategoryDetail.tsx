@@ -1,25 +1,25 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import ButtonRetour from "../components/ButtonRetour";
 import CategoryDeleteForm from "./CategoryDeleteForm";
 
-type Category = {
-  id: number;
-  name: string;
-};
+// type Category = {
+//   id: number;
+//   name: string;
+// };
 
 export default function CategoryDetail() {
   const { id } = useParams();
-  const [category, setCategory] = useState(null as null | Category);
+  // const [category, setCategory] = useState(null as null | Category);
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/categories/${id}`)
-      .then((response) => response.json())
-      .then((data: Category) => {
-        setCategory(data);
-      });
-  }, [id]);
+  // useEffect(() => {
+  //   fetch(`${import.meta.env.VITE_API_URL}/api/categories/${id}`)
+  //     .then((response) => response.json())
+  //     .then((data: Category) => {
+  //       setCategory(data);
+  //     });
+  // }, [id]);
 
   return (
     // category && (
@@ -34,7 +34,7 @@ export default function CategoryDetail() {
         <h2 className="selection">{category.name}</h2> */}
       <div className="selection-choix">
         <Link to={`/categories/${id}/edit`}>Modifier ✏️</Link>
-        <CategoryDeleteForm id={id}>Supprimer ❌</CategoryDeleteForm>
+        <CategoryDeleteForm id={id === "1" ? 1 : 2}>Supprimer ❌</CategoryDeleteForm>
       </div>
     </>
     // )
