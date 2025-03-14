@@ -1,31 +1,31 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import ButtonRetour from "../components/ButtonRetour";
 import ProgramDeleteForm from "./ProgramDeleteForm";
 
-type Program = {
-  id: number;
-  title: string;
-  synopsis: string;
-  poster: string;
-  country: string;
-  year: number;
-  category_id: number;
-};
+// type Program = {
+//   id: number;
+//   title: string;
+//   synopsis: string;
+//   poster: string;
+//   country: string;
+//   year: number;
+//   category_id: number;
+// };
 
 export default function ProgramDetail() {
   const { id } = useParams();
-  const [program, setProgram] = useState(null as null | Program);
+  // const [program, setProgram] = useState(null as null | Program);
   // console.log(id==="1");
 
-  useEffect(() => {
-    fetch(`${import.meta.env.VITE_API_URL}/api/programs/${id}`)
-      .then((response) => response.json())
-      .then((data: Program) => {
-        setProgram(data);
-      });
-  }, [id]);
+  // useEffect(() => {
+  //   fetch(`${import.meta.env.VITE_API_URL}/api/programs/${id}`)
+  //     .then((response) => response.json())
+  //     .then((data: Program) => {
+  //       setProgram(data);
+  //     });
+  // }, [id]);
 
   return (
     // program && (
