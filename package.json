@@ -1,6 +1,8 @@
 {
   "name": "@js-monorepo/client",
   "type": "module",
+  "homepage": "https://ChloeSeclier.github.io/wild-series-FRONT", 
+
   "scripts": {
     "check-types": "tsc --noEmit",
     "dev": "vite --host",
