@@ -1,0 +1,294 @@
+.button-add a {
+  border: solid 2px #41101f;
+  background-color: #ebd9e7;
+  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+a {
+  color: #41101f;
+}
+
+.button-add:hover a {
+  background-color: #41101f;
+  color: #f9f3f3;
+}
+
+/* ---------------Container formulaire button + input-------------- */
+.container-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+
+  /* --------------------Input-------------------- */
+  .InputContainer {
+    width: 13rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, #e1bdc8, #c09ab5);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+  }
+
+  .input {
+    width: 11.3rem;
+    height: 2.3rem;
+    border: none;
+    outline: none;
+    caret-color: #41101f;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+  }
+}
+
+/* --------------------Button ajouter-------------------- */
+/* From Uiverse.io by satyamchaudharydev */
+
+button {
+  font-family: "Sofia Sans Extra Condensed", serif;
+  letter-spacing: 0.1rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  position: relative;
+  display: inline-block;
+}
+
+.button-ajouter {
+  --primary-color: #41101f;
+  --hovered-color: #ab8686;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.button-ajouter p {
+  margin: 0;
+  position: relative;
+  color: var(--primary-color);
+}
+
+.button-ajouter::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: 0;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+.button-ajouter p::before {
+  position: absolute;
+  content: "Ajouter";
+  width: 0%;
+  inset: 0;
+  color: var(--hovered-color);
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.button-ajouter:hover::after {
+  width: 100%;
+}
+
+.button-ajouter:hover p::before {
+  width: 100%;
+}
+
+/*---------------------Display detail ------------------------------*/
+.container-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+
+  .container-detail-1 img {
+    max-height: 50dvh;
+  }
+  .container-detail-2 {
+    width: 100%;
+    h1 {
+      margin: 0;
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .container-detail {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    img {
+      max-width: 80dvw;
+      height: auto;
+    }
+  }
+}
+/*------------------------Page home --------------------------*/
+.home {
+  text-align: center;
+  margin: 0 2% 0 2%;
+  h1 {
+    margin: 0;
+  }
+  .link-detail {
+    border-bottom: solid 3px #41101f;
+  }
+  img {
+    width: 50%;
+  }
+  @media screen and (max-width: 700px) {
+    img {
+      width: 90%;
+    }
+  }
+}
+
+/*-------------------Page program index----------------*/
+.program-index {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/*------------ animation carré---------------*/
+.container-li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: transparent;
+}
+
+.box-li {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  box-sizing: border-box;
+  box-shadow: 5px 10px 15px #ab8686;
+  border: solid 1px #ab8686;
+  padding: 2%;
+
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+}
+p {
+  margin: 1%;
+
+  .underline {
+    border-bottom: solid 1px #c09ab5;
+    font-weight: 300;
+    font-size: 1.2rem;
+  }
+}
+.box-li span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+.box-li span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.box-li span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.box-li span:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.box-li span:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.box-li span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #ff007f;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+/*-------bouton retour------------*/
+.bouton-retour {
+  align-self: flex-start;
+  margin-inline: 1%;
+  border-bottom: solid 4px #ab8686;
+  p {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+.bouton-retour:hover {
+  border-bottom: solid 4px #41101f;
+  color: #ab8686;
+}
+
+/*-----------page detail modif/suppr----------*/
+.selection-h1 {
+  margin-bottom: 0;
+}
+.selection {
+  border: solid 1px #e1e0bd;
+  background-color: #41101f;
+  color: #f9f3f3;
+  padding: 1% 8% 1% 8%;
+  border-radius: 10em;
+}
+.selection-choix a:hover {
+  color: #c09ab5;
+}
